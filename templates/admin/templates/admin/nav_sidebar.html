@@ -1,0 +1,45 @@
+{% load i18n %}
+<button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="{% translate 'Toggle navigation' %}"></button>
+<nav class="sticky test" id="nav-sidebar">
+  <input type="search" id="nav-filter"
+         placeholder="{% translate 'Start typing to filter…' %}"
+         aria-label="{% translate 'Filter navigation items' %}">
+  {% include 'admin/app_list.html' with app_list=available_apps show_changelinks=False %}
+  <hr>
+  <div class="app-users module">
+    <table>
+      <caption>
+        <a href="/admin/users/" class="section" title="Models in the Users application">Users</a>
+      </caption>
+      
+        <tbody><tr class="model-profile">
+          
+            <th scope="row"><a href="{% url 'admin:sitesettings' %}">1 Settings333</a></th>
+            
+                <td><a href="/admin/users/profile/add/" class="addlink">DDA</a></td>           
+
+            
+            </tr>
+        
+        </tbody>
+    </table>
+  </div>
+  <div class="app-users module">
+    <table>
+      <caption>
+        <a href="/admin/users/" class="section" title="Models in the Users application">Users</a>
+      </caption>
+      
+        <tbody><tr class="model-profile">
+          
+            <th scope="row"><a href="{% url 'admin:test' %}">1 TEST</a></th>
+            
+                <td><a href="/admin/users/profile/add/" class="addlink">DDA</a></td>           
+
+            
+            </tr>
+        
+        </tbody>
+    </table>
+  </div>
+</nav>
